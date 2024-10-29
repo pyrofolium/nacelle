@@ -1,5 +1,6 @@
-## Some things I would do to optimize and scale:
+To run locally, run `run.sh`. This will bootstrap a sqlite database under a docker and docker-compose and run the fastapi server. 
 
+## Some things I would do to optimize and scale:
 - Transition from SQLite to a more robust data warehouse like **Snowflake** or **BigQuery** or **Redshift** for handling high volumes of data and supporting complex queries. These platforms are optimized for concurrent access and large datasets.
 - Add indexes to frequently accessed columns, such as `product_id` in `customer_feedback` and `marketing_campaigns` tables, to speed up joins and lookups.
 - Implement an async job that loads products and customer into the database.
@@ -12,21 +13,25 @@
 
 answer these questions related to the project:
 As part of the coding challenge, please provide a high-level system design for scaling the
-personalization engine you&#39;ve built to handle millions of users and products. Consider the
+personalization engine you've built to handle millions of users and products. Consider the
 following:
+
 1. How would you design the data pipeline to handle real-time updates to product
 information, customer feedback, and marketing campaigns?
 
 Assuming product updates, customer feedback and marketing campaigns are coming in at high volume I would use some 
-queue like kafka to queue these operations up during high traffic periods and batch insert them. If they are seldomely
-updated then directly inserting or updating a SQL database should be sufficient. 
+queue like kafka to queue these operations up during high traffic periods and batch insert them during low traffic. 
+If they aren't high volume then they can be updated then directly inserting or updating a SQL database should be 
+sufficient. 
 
 2. What database choices would you make for storing different types of data (product
 catalog, user interactions, recommendations)?
 
 Assuming user interactions are high volume and recommendations and product catalogue are low volume writes then
 User interactions would go into a database designed for analytics like big query. recommendations and product catalogue
-would go into a typical SQL database. 
+would go into a typical SQL database. Usually you'll want to queue these high volume queries into some sort of fast 
+queue like storage then batch insert it into the analytics database as in general inserts into these databases are 
+very slow and become more optimal the larger the batch being inserted. 
 
 3. How would you ensure low latency for product recommendations, even during high
 traffic periods?
@@ -35,7 +40,7 @@ Recommendations happen through the openai api which is very slow and expensive. 
 periodically that queries current products, customer profiles and updates the recommendations for each customer. Of 
 course this job runs during low traffic periods.
 
-Additionally I can put caching up so customers who access recommendations frequently don't hit the database but they
+Additionally, I can put caching up so customers who access recommendations frequently don't hit the database but they
 hit the cache instead. 
 
 If the web app gets overloaded you can put load balancing and auto-scaling on top of it. 
