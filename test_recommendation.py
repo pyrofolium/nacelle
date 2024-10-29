@@ -3,7 +3,11 @@ from unittest.mock import AsyncMock, patch
 import aiosqlite
 
 from bootstrap import bootstrap
-from recommendations import get_product_data, get_customer_data, generate_recommendation_for_customer
+from recommendations import (
+    get_product_data,
+    get_customer_data,
+    generate_recommendation_for_customer,
+)
 
 
 class TestRecommendations(unittest.IsolatedAsyncioTestCase):
@@ -22,7 +26,9 @@ class TestRecommendations(unittest.IsolatedAsyncioTestCase):
             self.assertEqual(customer_data["first_name"], "John")
             self.assertEqual(
                 customer_data["biography"],
-                "John Doe is a software developer with over 10 years of experience in the industry. He enjoys working on open-source projects and contributing to the tech community.")
+                "John Doe is a software developer with over 10 years of experience in the industry. He enjoys working on open-source projects and contributing to the tech community.",
+            )
+
 
 if __name__ == "__main__":
     unittest.main()

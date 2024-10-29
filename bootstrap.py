@@ -32,7 +32,10 @@ async def insert_into_table(
         column_names = ", ".join(item.keys())
         place_holders = ", ".join(["?"] * len(item))
         values = tuple(item.values())
-        await cursor.execute(f"INSERT INTO {table_name} ({column_names}) VALUES ({place_holders});", values)
+        await cursor.execute(
+            f"INSERT INTO {table_name} ({column_names}) VALUES ({place_holders});",
+            values,
+        )
         await connection.commit()
 
 
@@ -48,11 +51,7 @@ async def fill_tables_from_json(connection: aiosqlite.Connection) -> None:
         "data/customer-feedback-json.json",
         "data/customer-json.json",
     ]
-    table_names = [
-        "marketing_campaigns",
-        "customer_feedback",
-        "customers"
-    ]
+    table_names = ["marketing_campaigns", "customer_feedback", "customers"]
     # insert the rest of the data async.
     for file_name, table_name in zip(file_names, table_names):
         file = await aiofiles.open(file_name, "r")
@@ -68,7 +67,6 @@ async def drop_all_tables(connection: aiosqlite.Connection) -> None:
     tables = await cursor.fetchall()
     [await cursor.execute(f"DROP TABLE IF EXISTS {table[0]};") for table in tables]
     await connection.commit()
-
 
 
 async def main() -> None:

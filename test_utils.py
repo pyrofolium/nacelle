@@ -3,10 +3,13 @@ import os
 from utils import get_connection, read_file_async
 import aiosqlite
 
+
 class TestUtils(unittest.IsolatedAsyncioTestCase):
 
     async def test_get_connection(self):
-        connection = await get_connection(":memory:")  # Use an in-memory database for testing
+        connection = await get_connection(
+            ":memory:"
+        )  # Use an in-memory database for testing
         self.assertIsInstance(connection, aiosqlite.Connection)
         await connection.close()
 

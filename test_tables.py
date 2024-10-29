@@ -11,7 +11,9 @@ class TestTables(unittest.IsolatedAsyncioTestCase):
             cursor = await conn.cursor()
             for table_script in TABLES:
                 if isinstance(table_script, list):
-                    await asyncio.gather(*[cursor.execute(script) for script in table_script])
+                    await asyncio.gather(
+                        *[cursor.execute(script) for script in table_script]
+                    )
                 else:
                     await cursor.execute(table_script)
             await conn.commit()

@@ -7,13 +7,16 @@ import os
 
 database_name = "store.db"
 
+
 def remove_database():
     if os.path.isfile(database_name):
         os.remove(database_name)
 
+
 def get_connection(name: str) -> aiosqlite.Connection:
     connection = aiosqlite.connect(name)
     return connection
+
 
 def get_nacelle_connection() -> aiosqlite.Connection:
     return get_connection(database_name)
@@ -26,9 +29,7 @@ async def create_openai_client() -> AsyncOpenAI:
             *[read_file_async(path) for path in file_paths]
         )
         client = AsyncOpenAI(
-            api_key=secret_key,
-            organization=organization_id,
-            project=project_id
+            api_key=secret_key, organization=organization_id, project=project_id
         )
         return client
     except FileNotFoundError as e:

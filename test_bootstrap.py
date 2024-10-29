@@ -9,8 +9,16 @@ class TestBootstrap(unittest.IsolatedAsyncioTestCase):
     async def test_insert_into_table(self):
         async with aiosqlite.connect(":memory:") as conn:
             await conn.execute(
-                "CREATE TABLE products (id INTEGER PRIMARY KEY, name TEXT, description TEXT, price REAL)")
-            sample_data = [{"id": 1, "name": "Sample Product", "description": "Sample Description", "price": 9.99}]
+                "CREATE TABLE products (id INTEGER PRIMARY KEY, name TEXT, description TEXT, price REAL)"
+            )
+            sample_data = [
+                {
+                    "id": 1,
+                    "name": "Sample Product",
+                    "description": "Sample Description",
+                    "price": 9.99,
+                }
+            ]
 
             await insert_into_table(conn, "products", sample_data)
 

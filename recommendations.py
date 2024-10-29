@@ -11,7 +11,7 @@ from utils import create_openai_client, get_nacelle_connection
 
 ProductData = List[Dict[str, str | float]]
 CustomerData = Dict[str, str]
-JSON = List['JSON'] | str | None | Dict[str, 'JSON'] | float
+JSON = List["JSON"] | str | None | Dict[str, "JSON"] | float
 
 
 async def get_product_data(db_connection: aiosqlite.Connection) -> ProductData:
@@ -119,11 +119,15 @@ async def generate_recommendations(
 
 
 async def generate_recommendations_from_customer_id(
-        customer_id: int,
-        connection: aiosqlite.Connection,
-        client: AsyncOpenAI) -> Optional[Dict[str, Any]]:
-    customer_data, product_data = await get_customer_data(customer_id, connection), await get_product_data(connection)
-    return await generate_recommendation_for_customer(customer_data, product_data, client)
+    customer_id: int, connection: aiosqlite.Connection, client: AsyncOpenAI
+) -> Optional[Dict[str, Any]]:
+    customer_data, product_data = await get_customer_data(
+        customer_id, connection
+    ), await get_product_data(connection)
+    return await generate_recommendation_for_customer(
+        customer_data, product_data, client
+    )
+
 
 async def generate_recommendation_for_customer(
     customer_data: CustomerData, product_data: ProductData, client: AsyncOpenAI
@@ -161,7 +165,9 @@ async def generate_recommendation_for_customer(
 
 
 async def main():
-    connection, client = await asyncio.gather(get_nacelle_connection(), create_openai_client())
+    connection, client = await asyncio.gather(
+        get_nacelle_connection(), create_openai_client()
+    )
     product_data = await get_product_data(connection)
     recommendations = await generate_recommendations(product_data, client, connection)
     await connection.close()
