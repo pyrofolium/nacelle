@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "first_name": "John",
+        "last_name": "Doe",
+        "biography": "John Doe is a software developer with over 10 years of experience in the industry. He enjoys working on open-source projects and contributing to the tech community."
+    },
+    {
+        "id": 2,
+        "first_name": "Jane",
+        "last_name": "Smith",
+        "biography": "Jane Smith is a graphic designer who has a passion for creating visually appealing and user-friendly designs. She has worked with numerous clients across various industries."
+    },
+    {
+        "id": 3,
+        "first_name": "Emily",
+        "last_name": "Johnson",
+        "biography": "Emily Johnson is a marketing expert with a background in digital marketing and social media strategies. She helps businesses grow their online presence."
+    },
+    {
+        "id": 4,
+        "first_name": "Michael",
+        "last_name": "Brown",
+        "biography": "Michael Brown is an entrepreneur who has founded multiple startups in the tech sector. He specializes in business development and venture capital."
+    },
+    {
+        "id": 5,
+        "first_name": "Sophia",
+        "last_name": "Davis",
+        "biography": "Sophia Davis is an expert in data science and artificial intelligence. She has published numerous research papers and is a frequent speaker at industry conferences."
+    },
+    {
+        "id": 6,
+        "first_name": "Daniel",
+        "last_name": "Lee",
+        "biography": "Daniel Lee is a seasoned project manager with a proven track record of successful project deliveries in the IT industry."
+    },
+    {
+        "id": 7,
+        "first_name": "Emma",
+        "last_name": "Clark",
+        "biography": "Emma Clark is a talented writer and editor who works for several leading magazines. She enjoys writing fiction and non-fiction alike."
+    },
+    {
+        "id": 8,
+        "first_name": "Noah",
+        "last_name": "Martinez",
+        "biography": "Noah Martinez is a financial analyst specializing in market trends and investment strategies, helping clients make informed financial decisions."
+    },
+    {
+        "id": 9,
+        "first_name": "Olivia",
+        "last_name": "Rodriguez",
+        "biography": "Olivia Rodriguez is an accomplished chef who has worked in Michelin-starred restaurants around the world. She loves creating innovative dishes."
+    },
+    {
+        "id": 10,
+        "first_name": "Liam",
+        "last_name": "Garcia",
+        "biography": "Liam Garcia is a mechanical engineer with extensive experience in automotive design and manufacturing. He is passionate about sustainable engineering."
+    },
+    {
+        "id": 11,
+        "first_name": "Ava",
+        "last_name": "Hernandez",
+        "biography": "Ava Hernandez is a seasoned HR professional experienced in talent acquisition and employee development in large corporations."
+    },
+    {
+        "id": 12,
+        "first_name": "James",
+        "last_name": "Wilson",
+        "biography": "James Wilson is a cybersecurity expert who has helped numerous organizations secure their digital infrastructures and data."
+    },
+    {
+        "id": 13,
+        "first_name": "Mia",
+        "last_name": "Martinez",
+        "biography": "Mia Martinez is a pediatrician dedicated to children's health and wellness. She has a passion for educating parents on child care."
+    },
+    {
+        "id": 14,
+        "first_name": "Alexander",
+        "last_name": "Lopez",
+        "biography": "Alexander Lopez is an architect known for designing innovative and sustainable buildings. He has received multiple awards for his work."
+    },
+    {
+        "id": 15,
+        "first_name": "Isabella",
+        "last_name": "Gonzalez",
+        "biography": "Isabella Gonzalez is a talented musician and composer who has performed with orchestras around the world. She loves teaching music to students."
+    },
+    {
+        "id": 16,
+        "first_name": "William",
+        "last_name": "Perez",
+        "biography": "William Perez is a tech entrepreneur, having founded several successful startups. He is passionate about innovation and technology."
+    },
+    {
+        "id": 17,
+        "first_name": "Sophia",
+        "last_name": "Anderson",
+        "biography": "Sophia Anderson is a marketing strategist with a knack for creative campaigns that drive brand awareness and customer engagement."
+    },
+    {
+        "id": 18,
+        "first_name": "Elijah",
+        "last_name": "Thomas",
+        "biography": "Elijah Thomas is a civil engineer with expertise in urban development and infrastructure projects. He focuses on sustainable solutions."
+    },
+    {
+        "id": 19,
+        "first_name": "Charlotte",
+        "last_name": "Taylor",
+        "biography": "Charlotte Taylor is a nutritionist dedicated to promoting healthy eating habits and lifestyle changes to improve overall well-being."
+    },
+    {
+        "id": 20,
+        "first_name": "Benjamin",
+        "last_name": "Moore",
+        "biography": "Benjamin Moore is an attorney specializing in corporate law, providing legal counsel to businesses on a variety of legal matters."
+    },
+    {
+        "id": 21,
+        "first_name": "Amelia",
+        "last_name": "Jackson",
+        "biography": "Amelia Jackson is a data analyst with a strong background in statistical analysis and data visualization. She enjoys turning data into actionable insights."
+    },
+    {
+        "id": 22,
+        "first_name": "Lucas",
+        "last_name": "Martin",
+        "biography": "Lucas Martin is a software architect known for designing scalable and robust systems. He loves mentoring junior developers."
+    },
+    {
+        "id": 23,
+        "first_name": "Harper",
+        "last_name": "White",
+        "biography": "Harper White is a freelance photographer who has worked on various international assignments, capturing stunning landscapes and portraits."
+    },
+    {
+        "id": 24,
+        "first_name": "Mason",
+        "last_name": "Harris",
+        "biography": "Mason Harris is a research scientist in the field of biotechnology, developing innovative solutions for medical challenges."
+    },
+    {
+        "id": 25,
+        "first_name": "Evelyn",
+        "last_name": "Young",
+        "biography": "Evelyn Young is an environmental activist committed to raising awareness about climate change and promoting sustainable practices."
+    }
+]

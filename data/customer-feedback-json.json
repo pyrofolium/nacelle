@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "product_id": 1,
+    "feedback": "Great chair, really helped with my back pain!"
+  },
+  {
+    "id": 2,
+    "product_id": 1,
+    "feedback": "Comfortable, but a bit pricey."
+  },
+  {
+    "id": 3,
+    "product_id": 2,
+    "feedback": "Love being able to switch between sitting and standing."
+  },
+  {
+    "id": 4,
+    "product_id": 3,
+    "feedback": "Keys are responsive, but battery life is shorter than advertised."
+  },
+  {
+    "id": 5,
+    "product_id": 4,
+    "feedback": "Amazing picture quality, worth every penny!"
+  },
+  {
+    "id": 6,
+    "product_id": 5,
+    "feedback": "Good sound isolation, but they get a bit uncomfortable after long use."
+  }
+]

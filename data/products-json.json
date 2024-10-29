@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Ergonomic Chair",
+    "description": "Comfortable office chair with lumbar support",
+    "price": 199.99
+  },
+  {
+    "id": 2,
+    "name": "Standing Desk",
+    "description": "Adjustable height desk for better posture",
+    "price": 349.99
+  },
+  {
+    "id": 3,
+    "name": "Wireless Keyboard",
+    "description": "Bluetooth keyboard with long battery life",
+    "price": 79.99
+  },
+  {
+    "id": 4,
+    "name": "4K Monitor",
+    "description": "Ultra-high definition monitor for crisp visuals",
+    "price": 299.99
+  },
+  {
+    "id": 5,
+    "name": "Noise-Cancelling Headphones",
+    "description": "Over-ear headphones for immersive audio experience",
+    "price": 249.99
+  }
+]
