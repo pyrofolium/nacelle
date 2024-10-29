@@ -66,7 +66,10 @@ Basically you have a web app with a SQL database and a pipeline for processing a
 When the user makes a request or does something on the website it throws an event down the data pipeline that gets
 processed by something else later or it gets placed into an analytics database. 
 
-The request also triggers an action in the main database that usually involves a read of the database as well. 
+The request also triggers an action in the main database that usually involves a read of the database. 
 
 Async jobs can be done by something like celery with a rabbitMQ broker. These workers will mostly operating during low traffic
 to update the recommendation engine with new results from updated product/customer data and openai results. 
+
+AB tests will involve feature flags. The results of the AB tests are automatically stored in the analytics database
+you just need to query the right dimentions, metrics and filters to get the data you want. 
